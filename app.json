@@ -1,0 +1,12 @@
+{
+  "name": "app-mobile-power2go",
+  "displayName": "app-mobile-power2go",
+  "expo": {
+    "name": "app-mobile-power2go",
+    "slug": "app-mobile-power2go",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
