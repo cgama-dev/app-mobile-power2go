@@ -13,7 +13,7 @@
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly",
         "__DEV__": "readonly"
-      },
+    },
     "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
@@ -38,6 +38,11 @@
         "react/prop-types": "off",
         "no-param-reassign": "off",
         "no-console": "off",
-        "no-unused-expressions": ["error", { "allowTaggedTemplates": true }]
+        "no-unused-expressions": ["error", {
+            "allowTaggedTemplates": true
+        }],
+        "import/no-useless-path-segments": ["error", {
+            "noUselessIndex": true
+        }]
     }
 }
