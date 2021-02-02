@@ -1,9 +1,8 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import colors from './theme/global';
-import { Profile, Dashboard, Load, Historic } from './screens';
+import colors from '../theme/global';
+import { Profile, Dashboard } from '../screens';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -70,27 +69,19 @@ const configTabBar = {
   },
 };
 
-const Routes = () => (
-  <NavigationContainer>
-    <Navigator tabBarOptions={configTabBar.options}>
-      <Screen
-        name="Dashboard"
-        component={Dashboard}
-        options={configTabBar.icon.dashboard}
-      />
-      <Screen name="Carga" component={Load} options={configTabBar.icon.load} />
-      <Screen
-        name="Histórico"
-        component={Historic}
-        options={configTabBar.icon.historic}
-      />
-      <Screen
-        name="Perfil"
-        component={Profile}
-        options={configTabBar.icon.profile}
-      />
-    </Navigator>
-  </NavigationContainer>
+const AppRoutes = () => (
+  <Navigator tabBarOptions={configTabBar.options}>
+    <Screen
+      name="Dashboard"
+      component={Dashboard}
+      options={configTabBar.icon.dashboard}
+    />
+    <Screen
+      name="Perfil"
+      component={Profile}
+      options={configTabBar.icon.profile}
+    />
+  </Navigator>
 );
 
-export default Routes;
+export default AppRoutes;
